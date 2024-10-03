@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<p id="my"></p>
+    <script>
+    function myfun(division)
+    {
+        document.getElementById("my").innerHTML=division;
+
+    }
+     function sub(z,y)
+    {
+       var x= z-y;
+       myfun(x)
+    }
+    let myPromise= new Promise(function(myReslove, myReject)
+
+{
+
+let x=0;
+
+if(x==0)
+
+{
+
+myReslove("okay");
+
+}
+
+else{
+
+myReject("error");
+
+}
+
+});
+
+myPromise.then(
+
+function(value){ sub(12,23)},
+
+function(error){sub(error);}
+
+);
+</script>
+</body>
+</html>
